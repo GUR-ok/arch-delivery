@@ -30,8 +30,8 @@ public class DeliveryControllerImpl implements DeliveryController {
     }
 
     @Override
-    @GetMapping("{id}")
-    public DeliveryDataResponse getDelivery(@PathVariable(name = "id") final UUID orderId) {
+    @GetMapping
+    public DeliveryDataResponse getDelivery(@RequestParam(name = "orderId") final UUID orderId) {
         return conversionService.convert(deliveryService.getDeliveryData(orderId), DeliveryDataResponse.class);
     }
 }
