@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         property = "event"
 )
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = SomeEventData.class, name = "SOME")
+        @JsonSubTypes.Type(value = DeliveryCancelEventData.class, name = "DELIVERY_CANCEL")
 })
 public interface KafkaEvent extends EventSource{
 }
