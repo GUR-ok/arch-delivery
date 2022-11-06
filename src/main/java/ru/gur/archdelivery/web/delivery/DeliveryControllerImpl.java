@@ -16,7 +16,7 @@ import java.util.UUID;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/")
+@RequestMapping("/delivery")
 public class DeliveryControllerImpl implements DeliveryController {
 
     private final DeliveryService deliveryService;
