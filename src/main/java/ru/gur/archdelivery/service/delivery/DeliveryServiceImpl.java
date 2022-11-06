@@ -59,9 +59,9 @@ public class DeliveryServiceImpl implements DeliveryService {
 
     @Override
     @Transactional
-    public void cancelDelivery(final UUID orderId) {
-        Assert.notNull(orderId, "orderId must not be null");
+    public void cancelDelivery(final UUID deliveryId) {
+        Assert.notNull(deliveryId, "deliveryId must not be null");
 
-        deliveryRepository.deleteByOrderId(orderId);
+        deliveryRepository.deleteById(deliveryId);
     }
 }

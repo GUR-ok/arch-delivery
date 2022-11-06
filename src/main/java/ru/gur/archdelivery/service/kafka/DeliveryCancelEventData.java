@@ -9,7 +9,7 @@ import java.util.UUID;
 @Builder
 public class DeliveryCancelEventData implements KafkaEvent {
 
-    UUID orderId;
+    UUID deliveryId;
 
     @Override
     public Event getEvent() {

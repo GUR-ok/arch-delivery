@@ -11,5 +11,5 @@ public interface DeliveryService {
 
     DeliveryData getDeliveryData(UUID orderId);
 
-    void cancelDelivery(UUID orderId);
+    void cancelDelivery(UUID deliveryId);
 }

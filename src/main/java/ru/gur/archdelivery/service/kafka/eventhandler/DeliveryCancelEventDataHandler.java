@@ -27,7 +27,7 @@ public class DeliveryCancelEventDataHandler implements EventHandler<DeliveryCanc
     public String handleEvent(final DeliveryCancelEventData eventSource) {
         Assert.notNull(eventSource, "EventSource must not be null");
 
-        deliveryService.cancelDelivery(eventSource.getOrderId());
+        deliveryService.cancelDelivery(eventSource.getDeliveryId());
 
         log.info("Event handled: {}", eventSource);
 
